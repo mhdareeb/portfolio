@@ -102,6 +102,7 @@
             font-weight: 700;
             line-height: 1.1;
             margin-bottom: 1rem;
+            color: var(--text-primary); /* Fallback color */
             background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-blue) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -690,6 +691,39 @@
                 padding: 6rem 0 4rem;
             }
 
+            .hero h1 {
+                font-size: clamp(2rem, 12vw, 3.5rem);
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                hyphens: auto;
+            }
+
+            .hero h2 {
+                font-size: clamp(1.2rem, 6vw, 1.8rem);
+            }
+
+            .hero-description {
+                font-size: 1rem;
+                line-height: 1.6;
+            }
+
+            .hero-links {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 1rem;
+            }
+
+            .btn {
+                padding: 0.8rem 1.5rem;
+                font-size: 0.85rem;
+                text-align: center;
+            }
+
+            .social-links {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+
             .projects-grid {
                 grid-template-columns: 1fr;
             }
@@ -708,6 +742,46 @@
 
             .experience-meta {
                 text-align: left;
+            }
+
+            .project-tabs {
+                gap: 0.5rem;
+            }
+
+            .project-tab {
+                padding: 0.8rem 1rem;
+                font-size: 0.75rem;
+            }
+        }
+
+        /* Extra small devices */
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 1rem;
+            }
+
+            .hero h1 {
+                font-size: clamp(1.8rem, 10vw, 2.5rem);
+            }
+
+            .hero-label {
+                font-size: 0.75rem;
+                letter-spacing: 2px;
+            }
+
+            .btn {
+                padding: 0.7rem 1.2rem;
+                font-size: 0.8rem;
+            }
+
+            .section-title {
+                font-size: clamp(2rem, 8vw, 3rem);
+            }
+
+            .project-card,
+            .experience-card,
+            .education-card {
+                padding: 1.5rem;
             }
         }
 
